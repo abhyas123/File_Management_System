@@ -115,7 +115,7 @@
     async function downloadStreamFile(id) {
   try {
     const response = await fetch(`${API_URL}/stream/download/${id}`);
-    if (!response.ok) return alert("❌ File not found");
+    if (!response.ok) return alert("File not found");
 
     // Get file type and name from headers
 
@@ -137,7 +137,7 @@
       chunks.push(value);
     }
 
-    const blob = new Blob(chunks, { type: contentType }); //  Correct MIME type applied
+    const blob = new Blob(chunks, { type: contentType });
 
     const link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
