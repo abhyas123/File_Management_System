@@ -111,7 +111,7 @@ public class FileService {
 
         for (FileEntity file : files) {
             metadataList.add(new FileMetadataDTO(
-                    file.getId(),            // ✅ real database ID
+                    file.getId(),            //  real database ID
                     file.getName(),
                     file.getType(),
                     file.getData().length    // size in bytes
